@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_compass/flutter_compass.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Homepage(),
     );
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 }
 
 class Homepage extends StatefulWidget {
-  Homepage({super.key});
+  const Homepage({super.key});
 
   @override
   State<Homepage> createState() => _HomepageState();
@@ -44,7 +44,7 @@ class _HomepageState extends State<Homepage> {
       appBar: AppBar(
         backgroundColor: Colors.grey.shade900,
         centerTitle: true,
-        title: Text("Compass App"),
+        title: const Text("Compass App"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -52,15 +52,15 @@ class _HomepageState extends State<Homepage> {
         children: [
           Text(
             "${heading!.ceil()}°",
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 26.0,
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           Padding(
-            padding: EdgeInsets.all(18),
+            padding: const EdgeInsets.all(18),
             child: Stack(
               alignment: Alignment.center,
               children: [
